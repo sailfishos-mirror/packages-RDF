@@ -283,7 +283,7 @@ make_rdf_any_popup(Popup) :-
          menu_item(layout, message(Gr, layout))).
 
 event(F, Ev:event) :->
-    (   \+ send(Ev, is_a, ms_right_down),
+    (   \+ send(Ev, is_popup),
         send_super(F, event, Ev)
     ->  true
     ;   send(@rdf_any_recogniser, event, Ev)
