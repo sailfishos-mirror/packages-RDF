@@ -41,9 +41,6 @@
             run_test/1                  % run a single test
           ]).
 
-                                        % get libraries locally
-:- asserta(user:file_search_path(library, '.')).
-
 :- use_module(rdf).                     % our RDF parser
 :- use_module(w3c_ntdata).              % read old w4c .nt text data files
 :- load_files([ library(pce),
